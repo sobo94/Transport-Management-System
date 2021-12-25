@@ -1,0 +1,65 @@
+﻿<Page x:Class="Group2.BuyerSignIn"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Group2"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+      Title="Buyer Sign in">
+
+    <Grid>
+        <Line xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        X1="250" Y1="403"
+        X2="1030" Y2="403"
+        Stroke="#EF466F" StrokeDashArray="2, 2"
+        StrokeThickness="1" />
+        <Rectangle HorizontalAlignment="Left" Height="818" Margin="384,-18,0,0" StrokeThickness="1" VerticalAlignment="Top" Width="510" Fill="#E9E0E2"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="601,207,0,0" VerticalAlignment="Top" Width="64" Source="Images/buyer_avatar.png"/>
+        <TextBox x:Name="ForBuyerID" Padding="5" HorizontalAlignment="Left" Height="45" Margin="507,348,0,0" VerticalContentAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="284" Background="{x:Null}" BorderBrush="#EF466F" Foreground="#EF466F" SelectionBrush="#EF466F" FontSize="20"/>
+        <TextBlock x:Name="BuyerIdError" HorizontalAlignment="Left" Margin="507,398,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="1.592,0.031"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="507,315,0,0" VerticalAlignment="Top" Foreground="#EF466F" Background="{x:Null}" FontSize="20"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="507,428,0,0" VerticalAlignment="Top" Foreground="#EF466F" Background="{x:Null}" FontSize="20"/>
+        <PasswordBox x:Name="ForBuyerPassWord" HorizontalAlignment="Left" Padding="5" Margin="507,461,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="284" Height="45" Background="{x:Null}" BorderBrush="#EF466F" Foreground="#EF466F" SelectionBrush="#EF466F"/>
+        <TextBlock x:Name="BuyerPasswordError" HorizontalAlignment="Left" Margin="507,511,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0,-0.25"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="167,372,0,0" VerticalAlignment="Top" Width="64" Source="Images/buyer_truck.png"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="1043,372,0,0" VerticalAlignment="Top" Width="64" Source="Images/buyer_database.png"/>
+        <Button x:Name="AdminSignInButton" Content="Sign in"  Visibility="Visible" HorizontalAlignment="Left" Margin="570,571,0,0" VerticalAlignment="Top" Width="136" Height="50" BorderBrush="{x:Null}" FontSize="18" Foreground="White" Click="BuyerSignInButton_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#EF466F"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#EF466F"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="25"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBlock x:Name="AdminSingInAttemptMsg" HorizontalAlignment="Left" Margin="566,660,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="284" Height="54" Foreground="#FF9756D9"/>
+        <Rectangle x:Name="adminWarning" Visibility="Collapsed" Fill="#E5EF466F" HorizontalAlignment="Left" Height="818" Margin="-27,-18,0,0" StrokeThickness="1" VerticalAlignment="Top" Width="1307"/>
+        <Image x:Name="adminLock" Visibility="Collapsed" HorizontalAlignment="Left" Height="100" Margin="586,362,0,0" VerticalAlignment="Top" Width="100" Source="Images/lock.png"/>
+        <TextBlock x:Name="adminSignInFail" Visibility="Collapsed" HorizontalAlignment="Left" Margin="424,496,0,0" TextWrapping="Wrap" Text="Please contact support team" VerticalAlignment="Top" FontSize="34" Foreground="White"/>
+
+        <!-- Go Back Button Begin-->
+        <Canvas x:Name="buyer_go_back_avatar" Visibility="Collapsed" HorizontalAlignment="Left" Height="142" Margin="70,31,0,0" VerticalAlignment="Top" Width="292">
+            <Image x:Name="buyer_avatar_left" Height="100" Canvas.Left="35" Width="100" Cursor="Hand" Source="Images/avatar1.png" MouseEnter="buyer_avatar_left_MouseEnter" MouseLeave="buyer_avatar_left_MouseLeave" MouseLeftButtonDown="buyer_avatar_left_MouseLeftButtonDown"/>
+            <Image x:Name="buyer_avatar_right" Height="100" Canvas.Left="171" Width="100" Cursor="Hand" Source="Images/avatar3.png" MouseEnter="buyer_avatar_right_MouseEnter" MouseLeave="buyer_avatar_right_MouseLeave" MouseLeftButtonDown="buyer_avatar_right_MouseLeftButtonDown"/>
+            <Label x:Name="buyer_avatar_label_left" Content="Admin" HorizontalContentAlignment="Center" Canvas.Left="43" Canvas.Top="105" Width="86" FontSize="16" Background="{x:Null}" Foreground="#FF333333"/>
+            <Label x:Name="buyer_avatar_label_right" Content="Planner" HorizontalContentAlignment="Center" Canvas.Left="181" Canvas.Top="105" Width="86" FontSize="16" Background="{x:Null}" Foreground="#FF333333"/>
+        </Canvas>
+        <Image x:Name="buyer_go_back" HorizontalAlignment="Left" Height="50" Margin="38,55,0,0" VerticalAlignment="Top" Width="49" Cursor="Hand" Source="Images/go_back_icon_buyer.png" MouseLeftButtonDown="buyer_go_back_MouseLeftButtonDown" MouseEnter="buyer_go_back_MouseEnter"/>
+        <!-- Go Back Button End-->
+    </Grid>
+</Page>
+ 

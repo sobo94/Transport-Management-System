@@ -1,0 +1,161 @@
+﻿<Page x:Class="Group2.BuyerDashBoard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Group2"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+      Title="BuyerDashBoard">
+
+    <Canvas Background="#ffffff">
+        <Canvas HorizontalAlignment="Left" Height="800" VerticalAlignment="Top" Width="345" RenderTransformOrigin="-0.26,-4.27" Background="#E9E0E2">
+            <Image Source="Images/buyer_panel_icon.png" RenderTransformOrigin="1.706,2.006" Canvas.Left="54" Canvas.Top="46" />
+            <Label Content="Buyer Dashboard" Canvas.Left="111" Canvas.Top="46" FontSize="18" Foreground="#FF333333" MouseLeftButtonDown="Label_MouseLeftButtonDown" Cursor="Hand"/>
+            <Line xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            X1="250" Y1="403"
+            X2="500" Y2="403"
+            Stroke="#333333" StrokeDashArray="2, 2"
+            StrokeThickness="1" Canvas.Left="-213" Canvas.Top="-298" />
+
+            <!-- [Menu Items on the leftside] -->
+            <Canvas x:Name="buyer_menu1" Height="63" Canvas.Top="133" Width="345" MouseEnter="buyer_menu1_MouseEnter" MouseLeave="buyer_menu1_MouseLeave" MouseLeftButtonDown="buyer_menu1_MouseLeftButtonDown" Cursor="Hand">
+                <Image Source="Images/low-priority.png" RenderTransformOrigin="1.706,2.006" Canvas.Left="27" Canvas.Top="16" />
+                <Label x:Name="buyer_menu1_label" Content="Initiate Orders" Canvas.Left="72" Canvas.Top="16" FontSize="18" Foreground="#FF787878" Width="174"/>
+            </Canvas>
+            <Canvas x:Name="buyer_menu3" Height="63" Canvas.Top="203" Width="345" MouseEnter="buyer_menu3_MouseEnter" MouseLeave="buyer_menu3_MouseLeave" MouseLeftButtonDown="buyer_menu3_MouseLeftButtonDown" Cursor="Hand">
+                <Image Source="Images/bill.png" RenderTransformOrigin="1.706,2.006" Canvas.Left="27" Canvas.Top="15" />
+                <Label x:Name="buyer_menu3_label" Content="Generate Invoice" Canvas.Left="72" Canvas.Top="15" FontSize="18" Foreground="#FF787878" Width="250"/>
+            </Canvas>
+            <Canvas x:Name="BuyerBackToMain" Height="63" Canvas.Top="699" Width="345" Background="#EF466F" MouseLeftButtonDown="BuyerBackToMain_MouseLeftButtonDown" Cursor="Hand">
+                <Label Content="Back to Main" Canvas.Left="122" Canvas.Top="14" Foreground="White" FontSize="20"/>
+                <Image Height="32" Canvas.Left="51" Canvas.Top="18" Width="73" Source="door.png"/>
+            </Canvas>
+            
+            <!-- Tutorial Banner-->
+            <Image Height="325" Canvas.Left="10" Canvas.Top="409" Width="325" Source="Images/comingsoon.png"/>
+            <Label Content="Coming Soon" Padding="10, 10, 10, 10" Canvas.Left="103" Canvas.Top="409" Foreground="white" FontSize="20" Background="#FFEF466F"/>
+            <Label Content="Learn More About Group2 TMS" Canvas.Left="61" Canvas.Top="466" Foreground="#FF333333" FontSize="16" />
+
+        </Canvas>
+
+        <!-- [Dashboard - Main] -->
+        <Canvas x:Name="buyer_dashboard_main" Visibility="Visible" Height="800" Canvas.Left="350" Width="920">
+            <TextBlock Canvas.Left="335" TextWrapping="Wrap" Text="Things Get You Going as a Buyer" Canvas.Top="58" FontSize="20" FontWeight="Bold"/>
+            <TextBlock Canvas.Left="158" TextWrapping="Wrap" Text="The Buyer has the ability to initiate orders from the Contract Market Place, and can generate invoices for the completed orders" Canvas.Top="102" FontSize="16" Height="47" Width="651" Foreground="#FF787878"/>
+            <Image Height="498" Canvas.Left="233" Canvas.Top="149" Width="498" Source="Images/buyer_main_1.jpg"/>
+            <TextBlock Canvas.Left="158" TextWrapping="Wrap" Canvas.Top="620" FontSize="16" Height="134" Width="651" Foreground="#FF787878"/>
+        </Canvas>
+
+        <!-- [Dashboard - Initiate Order] [Start] -->
+        <Canvas x:Name="buyer_dashboard_ini_orders" Visibility="Collapsed" Height="800" Canvas.Left="350" Width="930">
+            <TextBlock Canvas.Left="402" TextWrapping="Wrap" Text="Initiate Orders" Canvas.Top="36" FontSize="20" FontWeight="Bold"/>
+            <TextBlock Canvas.Left="158" TextWrapping="Wrap" Text="Please Select Orders to initiate them from the Contract Market Place" Canvas.Top="71" FontSize="16" Height="47" Width="651" Foreground="#FF787878"/>
+
+            <!-- Marketplace Data grid -->
+            <DataGrid x:Name="Marketplace_datagrid"  AutoGenerateColumns="True" Height="258" Canvas.Left="62" Canvas.Top="172" Width="791" Padding="5,5,5,5" BorderBrush="#FFFBA5BA" BorderThickness="5">
+                <!-- Column Header Style -->
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="Background" Value="Crimson" />
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="BorderBrush" Value="White"/>
+                        <Setter Property="BorderThickness" Value="0.5"/>
+                        <Setter Property="Padding" Value="5,10,5,10" />
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+            </DataGrid>
+
+
+            <!-- Marketplace Signin -->
+            <Canvas x:Name="buyer_market_db_signin" Visibility="Visible" Height="258" Canvas.Left="62" Canvas.Top="172" Width="791">
+                <Canvas.Background>
+                    <SolidColorBrush Color="#FFFDDAE3" Opacity="0.9"/>
+                </Canvas.Background>
+                <Label x:Name="buyer_market_signin_close" Content="[x]" Foreground="#EF466F" Background="{x:Null}" FontSize="20" Canvas.Left="737" Canvas.Top="11" MouseLeftButtonDown="buyer_market_signin_close_MouseLeftButtonDown" Cursor="Hand"/>
+                <TextBox x:Name="buyer_dashboard_market_id" Padding="5" HorizontalAlignment="Left" Height="30" VerticalContentAlignment="Center" TextWrapping="Wrap" Text="DevOSHT" VerticalAlignment="Top" Width="129" Background="{x:Null}" BorderBrush="#EF466F" Foreground="#EF466F" SelectionBrush="#EF466F" FontSize="16" Canvas.Left="172" Canvas.Top="41"/>
+                <Label Content="Username" Foreground="#EF466F" Background="{x:Null}" FontSize="20" Canvas.Left="68" Canvas.Top="37"/>
+                <PasswordBox x:Name="buyer_dashboard_market_password" Password="Snodgr4ss!" Padding="5" HorizontalAlignment="Left" Height="30" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="129" Background="{x:Null}" BorderBrush="#EF466F" Foreground="#EF466F" SelectionBrush="#EF466F" FontSize="16" Canvas.Left="172" Canvas.Top="97"/>
+                <Label Content="Password" Foreground="#EF466F" Background="{x:Null}" FontSize="20" Canvas.Left="74" Canvas.Top="93" Width="97"/>
+                <TextBox x:Name="buyer_dashboard_market_ip" Padding="5" HorizontalAlignment="Left" Height="30" VerticalContentAlignment="Center" TextWrapping="Wrap" Text="159.89.117.198" VerticalAlignment="Top" Width="285" Background="{x:Null}" BorderBrush="#EF466F" Foreground="#EF466F" SelectionBrush="#EF466F" FontSize="16" Canvas.Left="419" Canvas.Top="41"/>
+                <Label Content="IP" Foreground="#EF466F" Background="{x:Null}" FontSize="20" Canvas.Left="379" Canvas.Top="40" Width="35"/>
+                <TextBox x:Name="buyer_dashboard_market_port" Text="3306" Padding="5" HorizontalAlignment="Left" Height="30" VerticalContentAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Background="{x:Null}" BorderBrush="#EF466F" Foreground="#EF466F" SelectionBrush="#EF466F" FontSize="16" Canvas.Left="417" Canvas.Top="94"/>
+                <Label Content="Port" Foreground="#EF466F" Background="{x:Null}" FontSize="20" Canvas.Left="364" Canvas.Top="90" Width="47"/>
+                <TextBox x:Name="buyer_dashboard_market_ip_dbName" Text="cmp" Padding="5" HorizontalAlignment="Left" Height="30" VerticalContentAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Background="{x:Null}" BorderBrush="#EF466F" Foreground="#EF466F" SelectionBrush="#EF466F" FontSize="16" Canvas.Left="616" Canvas.Top="94"/>
+                <Label Content="DB" Foreground="#EF466F" Background="{x:Null}" FontSize="20" Canvas.Left="563" Canvas.Top="90" Width="47"/>
+                <Button x:Name="buyer_dashboard_market_button" Content="Connect"  Visibility="Visible" HorizontalAlignment="Left" VerticalAlignment="Top" Width="184" Height="50" BorderBrush="{x:Null}" FontSize="18" Foreground="White" Canvas.Left="283" Canvas.Top="178" Click="buyer_dashboard_market_button_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#EF466F"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#EF466F"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="25"
+                            Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Canvas>
+
+            <Label x:Name="market_status_bar" Content="Martket Place DB Sign in" HorizontalContentAlignment="Center" Canvas.Left="62" Canvas.Top="146" Background="#FFEF466F" Width="253" Foreground="White" FontSize="14" MouseLeftButtonDown="Label_MouseLeftButtonDown_1" Cursor="Hand"/>
+            <Label x:Name="accept_contract" Content="Accept Contract" HorizontalContentAlignment="Center" Canvas.Left="600" Canvas.Top="146" Background="#FFEF466F" Width="253" Foreground="White" FontSize="14" Cursor="Hand" MouseLeftButtonDown="accept_contract_MouseLeftButtonDown"/>
+            <Label x:Name="tms_status_bar" Content="TMS DB Sign in" HorizontalContentAlignment="Center" Canvas.Left="62" Canvas.Top="720" Background="#FFEF466F" Width="791" Foreground="White" FontSize="14" Cursor="Hand" Height="39"/>
+            <!-- [Dashboard - Initiate Order] [End] -->
+
+
+            <!-- TMS Data grid -->
+            <DataGrid x:Name="ORDER_datagrid"  AutoGenerateColumns="True" Height="226" Canvas.Left="62" Canvas.Top="494" Width="791" BorderBrush="#FFFBA5BA" BorderThickness="5" SelectionChanged="ORDER_datagrid_SelectionChanged">
+                <!-- Column Header Style -->
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="Background" Value="Crimson" />
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="BorderBrush" Value="White"/>
+                        <Setter Property="BorderThickness" Value="0.5"/>
+                        <Setter Property="Padding" Value="5,10,5,10" />
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+            </DataGrid>
+            <ComboBox x:Name="Carrier_ComboBox" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Canvas.Left="252" Canvas.Top="447" Width="272" SelectionChanged="Carrier_ComboBox_SelectionChanged" Height="37" BorderBrush="#FFEF466F"/>
+            <Button x:Name="add_carrier_btn" Content="Add Carrier" Canvas.Left="538" Canvas.Top="447" Width="125" Click="Button_Add_Carrier" Height="37" Background="#FFEF466F" BorderBrush="{x:Null}" Foreground="White" FontSize="16"/>
+            <Button x:Name="update_order_db_btn" Content="Update Order DB" Canvas.Left="728" Canvas.Top="460" Width="125" Click="Button_Update_Order_DB" Height="35" BorderBrush="{x:Null}" Background="#FFEF466F" Foreground="White"/>
+        </Canvas>
+
+        <!-- [Dashboard - Review Completed Orders] Do we use it??????????????? -->
+        <Canvas Height="800" Canvas.Left="345" Width="935" Visibility="Collapsed">
+            <TextBlock Canvas.Left="374" TextWrapping="Wrap" Text="Review Completed Orders" Canvas.Top="48" FontSize="20" FontWeight="Bold"/>
+            <TextBlock Canvas.Left="158" TextWrapping="Wrap" Text="Please review the completed orders and generate invoices" Canvas.Top="111" FontSize="16" Height="47" Width="651" Foreground="#FF787878"/>
+        </Canvas>
+
+        <!-- [[Dashboard - Generate invoice] -->
+        <Canvas x:Name="buyer_dashboard_generate_invoice" Height="800" Canvas.Left="345" Width="935" Visibility="Collapsed">
+            <TextBlock Canvas.Left="374" TextWrapping="Wrap" Text="Generate Invoices" Canvas.Top="48" FontSize="20" FontWeight="Bold"/>
+            <TextBlock Canvas.Left="158" TextWrapping="Wrap" Text="Please review completed orders and generate invoices" Canvas.Top="111" FontSize="16" Height="47" Width="651" Foreground="#FF787878"/>
+            <DataGrid x:Name="completed_orders" AutoGenerateColumns="True" Height="297" Canvas.Left="57" Canvas.Top="172" Width="836" Padding="5,5,5,5" BorderBrush="#FFFBA5BA" BorderThickness="5">
+                <!-- Column Header Style -->
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="Background" Value="Crimson" />
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="BorderBrush" Value="White"/>
+                        <Setter Property="BorderThickness" Value="0.5"/>
+                        <Setter Property="Padding" Value="5,10,5,10" />
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+            </DataGrid>
+            <Label x:Name="gen_invoice" Content="Generate Invoice" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Canvas.Left="335" Canvas.Top="552" Background="#FFEF466F" Width="253" Foreground="White" FontSize="18" Cursor="Hand" MouseLeftButtonDown="generate_invoice_MouseLeftButtonDown" Height="42"/>
+            <Image Height="383" Canvas.Left="510" Canvas.Top="387" Width="383" Source="Images/invoice.png"/>
+        </Canvas>
+
+    </Canvas>
+
+</Page>

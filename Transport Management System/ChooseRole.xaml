@@ -1,0 +1,91 @@
+﻿<Page x:Class="Group2.ChooseRole"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Group2"
+      mc:Ignorable="d" 
+      d:DesignHeight="800
+      " d:DesignWidth="1280"
+      Title="Choose Your Role">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="500,56,0,0" TextWrapping="Wrap" Text="Choose Your Role" VerticalAlignment="Top" FontSize="24"/>
+        <Image Margin="62,156,856,328" Source="Images/admin.jpg" Stretch="Fill"/>
+        <Image Margin="452,156,467,329" Source="Images/buyer.jpg" Stretch="Fill"/>
+        <Image Margin="849,157,70,328" Source="Images/planner.jpg" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Left" Margin="62,476,0,0" TextWrapping="Wrap" Text="Admin" VerticalAlignment="Top" Foreground="#FF333333" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="62,510,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="343"><Run Foreground="#FF333333" Text="The admin has the ability to set up Database connection, backup database information and can alter carrier details"/></TextBlock>
+
+        <Button x:Name="StartAdmin" Content="Get Started" HorizontalAlignment="Left" Margin="62,603,0,0" VerticalAlignment="Top" Width="135" Height="50" BorderBrush="{x:Null}" FontSize="18" Foreground="White" Click="StartAdmin_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#9756D9"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#7342A6"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="25"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="452,476,0,0" TextWrapping="Wrap" Text="Buyer" VerticalAlignment="Top" Foreground="#FF333333" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="452,510,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="343"><Run Foreground="#FF333333" Text="In the buyer you can accept new orders to make them available for the planner and generate invoices for the completed orders"/></TextBlock>
+        <Button x:Name="StartBuyer" Content="Get Started" HorizontalAlignment="Left" Margin="452,603,0,0" VerticalAlignment="Top" Width="135" Height="50" BorderBrush="{x:Null}" FontSize="18" Foreground="White" Click="StartBuyer_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#EF466F"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#C43A5B"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="25"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="853,476,0,0" TextWrapping="Wrap" Text="Planner" VerticalAlignment="Top" Foreground="#FF333333" FontSize="20" Width="84"/>
+        <TextBlock HorizontalAlignment="Left" Margin="853,510,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="343"><Run Foreground="#FF333333" Text="The Planner can look at the status of all the orders and can generate the charges and timing for each order"/></TextBlock>
+        <Button x:Name="StartPlanner" Content="Get Started" HorizontalAlignment="Left" Margin="853,603,0,0" VerticalAlignment="Top" Width="135" Height="50" BorderBrush="{x:Null}" FontSize="18" Foreground="White" Click="StartPlanner_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#45B16B"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#317D4C"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="25"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Page>

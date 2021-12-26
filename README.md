@@ -31,8 +31,8 @@ TMS requires 3 Employees/ User roles to operate. Support for 3 Different Roles A
 |     Planner   |     Planner   |   Planner  |
 
 
-# Admin Functionality
-Image: ![Admin](https://user-images.githubusercontent.com/16788406/147396922-c8603081-7885-44ea-8340-b2390690ffc8.PNG)
+## Admin Functionality
+![Admin](https://user-images.githubusercontent.com/16788406/147396922-c8603081-7885-44ea-8340-b2390690ffc8.PNG)
 
 
 + Access General Config
@@ -44,8 +44,8 @@ Image: ![Admin](https://user-images.githubusercontent.com/16788406/147396922-c86
 + Create Data Backup
 + Set up Database Connection
 
-# Buyer Functionality
-Image: ![Buyer](https://user-images.githubusercontent.com/16788406/147396924-c867f3a8-a485-44b8-8832-d381f080f306.PNG)
+## Buyer Functionality
+![Buyer](https://user-images.githubusercontent.com/16788406/147396924-c867f3a8-a485-44b8-8832-d381f080f306.PNG)
 
 
 + Connects to an external server which hosts a DB containing Clients orders.
@@ -56,8 +56,8 @@ Image: ![Buyer](https://user-images.githubusercontent.com/16788406/147396924-c86
 + Buyer can also review all the Completed Orders.
 + Buyer can generate Invoices for completed orders and stores it as an invoice File 
 
-# Planner Functionality
-Image: ![Planner](https://user-images.githubusercontent.com/16788406/147396928-f31d0779-48bd-4f84-93e9-1caac6b6f2bb.PNG)
+## Planner Functionality
+![Planner](https://user-images.githubusercontent.com/16788406/147396928-f31d0779-48bd-4f84-93e9-1caac6b6f2bb.PNG)
 
 
 - Planner based on the Order status view's the Order Table entries assigned to him.

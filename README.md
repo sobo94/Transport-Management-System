@@ -1,17 +1,16 @@
-# Transport-Management-System Overview:
+# Transport-Management-System Overview
 
-TMS is an application which deals with the Transportation Logistics of Order Delievery. This application conceptually can be thought of 
-as a connector of Amazon Orders with Transportation Carrier like U-Haul or FedEx. TMS has 7 Operational Cities, 4 carrier companies with which TMS Works.
-TMS does Route management and logistics including financial services. 
+TMS is an application which deals with the Transportation Logistics of Order Delievery. Conceptually similar to Canada Post Web Application.
+TMS has 7 Operational Cities, 4 Truck carrier companies with which TMS Works. TMS does Route management, logistics and Invoicing. 
 
 * [Video Demo](https://www.youtube.com/watch?v=9TIqV2i-tsY)
-* [Doxygen HTML](https://github.com/sobo94/Transport-Management-System/files/7776452/TMS_Doxygen_html.zip)
+* [Doxygen Documentation](https://github.com/sobo94/Transport-Management-System/files/7776452/TMS_Doxygen_html.zip)
 
 
 ## Software Technologies Used: 
 + WPF Application (.Net Framework) written in C#. 
-+ DB: MySQL Server 
-+ SCRUM: Azure DevOp Boards.  
++ Database: MySQL Server 
++ Agile Tool: Azure DevOp Boards.  
 + Software Diagramming: Visio, Lucid Chart.  
 + Wireframing: Figma, Adobe XD.
 + Misc: Unit Testing, Git, GitHub, DOxygen Documentation.

@@ -4,11 +4,13 @@ TMS is an application which deals with the Transportation Logistics of Order Del
 as a connector of Amazon Orders with Transportation Carrier like U-Haul or FedEx. TMS has 7 Operational Cities, 4 carrier companies with which TMS Works.
 TMS does Route management and logistics including financial services. 
 
-### Video Demo  : [https://www.youtube.com/channel/UCDlpshJb7_IA35RHVCEMIpg]
+* [Video Demo](https://www.youtube.com/channel/UCDlpshJb7_IA35RHVCEMIpg)
+* [Doxygen HTML](https://github.com/sobo94/Transport-Management-System/files/7776452/TMS_Doxygen_html.zip)
+
 
 ## Software Technologies Used: 
 + WPF Application (.Net Framework) written in C#. 
-+ DB: MySQL. 
++ DB: MySQL Server 
 + SCRUM: Azure DevOp Boards.  
 + Software Diagramming: Visio, Lucid Chart.  
 + Wireframing: Figma, Adobe XD.
@@ -30,8 +32,8 @@ TMS requires 3 Employees/ User roles to operate. Support for 3 Different Roles A
 
 
 # Admin Functionality
+Image: ![Admin](https://user-images.githubusercontent.com/16788406/147396922-c8603081-7885-44ea-8340-b2390690ffc8.PNG)
 
-Image: 
 
 + Access General Config
 + Review Log Files
@@ -42,10 +44,9 @@ Image:
 + Create Data Backup
 + Set up Database Connection
 
-# Buyer Functionality[TMS_Doxygen_html.zip](https://github.com/sobo94/Transport-Management-System/files/7776452/TMS_Doxygen_html.zip)
+# Buyer Functionality
+Image: ![Buyer](https://user-images.githubusercontent.com/16788406/147396924-c867f3a8-a485-44b8-8832-d381f080f306.PNG)
 
-
-Image: 
 
 + Connects to an external server which hosts a DB containing Clients orders.
 + New Client entries get generates every 10 mins. 
@@ -56,7 +57,8 @@ Image:
 + Buyer can generate Invoices for completed orders and stores it as an invoice File 
 
 # Planner Functionality
-Image:
+Image: ![Planner](https://user-images.githubusercontent.com/16788406/147396928-f31d0779-48bd-4f84-93e9-1caac6b6f2bb.PNG)
+
 
 - Planner based on the Order status view's the Order Table entries assigned to him.
 - Planner selects an Order and based on the Route Information specified computes Order infomation.

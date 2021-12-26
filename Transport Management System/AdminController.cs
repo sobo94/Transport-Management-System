@@ -126,7 +126,6 @@ namespace Group2
         *  \param    mySqlCommand string
         *  \returns  NONE
         */
-
         public static void ConnectToDB(string mySqlCommand)
         {
             try
@@ -166,7 +165,6 @@ namespace Group2
         *  \param    BackupFile string
         *  \returns  NONE
         */
-
         public static void localBackup(string ConnectionStringForTMS, string BackupFile)
         {
 

@@ -4,7 +4,7 @@ TMS is an application which deals with the Transportation Logistics of Order Del
 as a connector of Amazon Orders with Transportation Carrier like U-Haul or FedEx. TMS has 7 Operational Cities, 4 carrier companies with which TMS Works.
 TMS does Route management and logistics including financial services. 
 
-* [Video Demo](https://www.youtube.com/channel/UCDlpshJb7_IA35RHVCEMIpg)
+* [Video Demo](https://www.youtube.com/watch?v=9TIqV2i-tsY)
 * [Doxygen HTML](https://github.com/sobo94/Transport-Management-System/files/7776452/TMS_Doxygen_html.zip)
 
 

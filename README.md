@@ -11,8 +11,8 @@ TMS has 7 Operational Cities, 4 Truck carrier companies with which TMS Works. TM
 + WPF Application (.Net Framework) written in C#. 
 + Database: MySQL Server 
 + Agile Tool: Azure DevOp Boards.  
-+ Software Diagramming: Visio, Lucid Chart.  
-+ Wireframing: Figma, Adobe XD.
++ Software Diagramming:  Lucid Chart.  
++ Wireframing: Adobe XD.
 + Misc: Unit Testing, Git, GitHub, DOxygen Documentation.
 
 ## Instructions to deploy:

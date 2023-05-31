@@ -9,7 +9,7 @@ TMS has 7 Operational Cities, 4 Truck carrier companies with which TMS Works. TM
 
 ## Software Technologies Used: 
 + WPF Application (.Net Framework) written in C#. 
-+ Database: MySQL Server 
++ Database: MySQL  
 + Agile Tool: Azure DevOp Boards.  
 + Software Diagramming:  Lucid Chart.  
 + Wireframing: Adobe XD.
